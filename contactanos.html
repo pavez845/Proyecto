@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/contactanosS.css" rel="stylesheet">
+</head>
+<body>
+    
+</body>
+<button class="botonbonito" onclick="history.back()">Volver</button>
+</html>
+<div class="container">
+    <div style="text-align:center">
+      <h2>Contactanos</h2>
+      <p>Dejale un mensaje a nuestros chefcitos</p>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="https://thumbs.dreamstime.com/b/cat-chef-frying-whole-fish-square-grill-pan-gas-stove-white-background-cat-chef-frying-fish-122700099.jpg" style="width:100%">
+        </div>
+        <body>
+          <form id="formulario_email" onsubmit="event.preventDefault(); generarCarta();">
+              <fieldset>
+                  <br>
+                  <br>
+                  <label for="nombre">Ingresa tu nombre</label>
+                  <input type="text" name="nombre" id="nombre">
+                  <br>
+                  <br>
+                  <label for="apellidop">Ingresa tu Apellido paterno</label>
+                  <input type="text" name="apellidop" id="apellidop" >
+                  <br>
+                  <br>
+                  <label for="apellidom">Ingresa tu Apellido Materno</label>
+                  <input type="text" name="apellidom" id="apellidom" >
+                  <br>
+                  <br>
+                  <label for="celular">Ingrese su celular</label> 
+                  <input type="text" name="celular" id="celular" >
+                  <br>
+                  <br>
+                  <label for="email">Ingrese su Email</label> 
+                  <input type="text" name="email" id="email">
+                  <br>
+                  <br>
+                  <label for="motivacion">Deje su mensaje aqui</label> <br>
+                  <textarea cols="40" rows="10" id="motivacion" name="motivacion"></textarea>
+                  <input type="submit" value="Enviar">
+              </fieldset>
+          </form>
+      </body>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+          
+      
+          <script>
+      
+            $(document).ready(function() {
+      
+              $("#formulario_email").submit(function() {
+      
+                var nombre = $("#nombre").val();
+                var apellidop =$("#apellidop").val();
+                var apellidom =$("#apellidom").val();
+                var rut =$("#rut").val();
+                
+                var email = $("email").val();
+      
+      
+      
+                console.log(nombre.length);
+      
+      
+      
+                if (nombre == "" || nombre.length >20 || nombre.length <3) {
+      
+                  alert("Nombre no válido");
+      
+                  event.preventDefault();
+      
+                  return false;
+      
+                }
+      
+                if (apellidop == "" || apellidop.length >20 || apellidop.length <3){
+                  alert("apellido paterno no valido");
+      
+                  event.preventDefault();
+      
+                  return false;
+      
+                }
+      
+                if (apellidom == "" || apellidom.length > 20 || apellidom.length <3){
+      
+                  alert("Apellido no valido");
+      
+                  event.preventDefault();
+      
+                  return false; 
+                }
+                
+                if (email == "") {
+      
+                  alert("Email no válido");
+      
+                  event.preventDefault();
+      
+                  return false;
+      
+                }
+      
+      
+      
+                alert("Fomulario enviado con éxito");
+      
+              })
+      
+            })
+      
+          </script>
+      </html>

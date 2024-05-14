@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+html {
+	font-size: 100%;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+/* navbar */
+.navbar {
+    background-color: transparent; 
+    position: absolute; 
+    width: 100%; 
+    z-index: 1000; 
+    transition: background-color 0.3s ease; 
+}
+.navbar:hover {
+    background-color: lemonchiffon; 
+}
+.navbar-brand, .navbar-nav .nav-link {
+    color: #000000;
+    transition: color 0.3s ease; 
+}
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: orange; 
+}
+
+.btn-reserva {
+    background-color: rgb(241, 180, 67); 
+    border-color: rgb(253, 177, 36); 
+}
+
+.restaurant-title {
+    text-align: center; 
+    margin-top: 100px; 
+    color: #ecb71a;
+    font-size: 2.5rem; 
+}
+.restaurant-description {
+    text-align: center; 
+    margin-bottom: 50px; 
+    color: #666;
+    font-size: 1.25rem;
+}
+
+#carouselExample {
+    background-image: url('https://s3.abcstatics.com/media/gurmesevilla/2012/01/comida-rapida-casera.jpg'),
+     url('https://oleico.com/wp-content/uploads/2020/06/original-061eb31f9aaa850b7852a5e4411983a7-scaled-1.jpeg'); /* Establecer las imágenes como fondo */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 600px; 
+    position: relative; 
+}
+.carousel-inner {
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.carousel-item {
+    background-position: center; 
+    background-size: cover; 
+    height: 600px; 
+}
+.carousel-item img {
+    display: none; 
+}
+.plato {
+    transition: 0.5s;
+}
+.collage{
+    width: 70%;
+    height:auto;
+    transition: 0.5s;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.collage:hover{
+    transform: scale(1.1);
+}
+.plato:hover{
+    transform: scale(1.1);
+    
+}
+
+.container-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.card-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #ffc156;
+    border-radius: 10px; 
+    padding: 1rem; 
+}
+.card-feature i {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature-content span {
+    font-weight: 300;
+    font-size: 1rem; 
+    color: var(--dark-color);
+}
+
+.feature-content p {
+    color: #777;
+    font-weight: 200;
+    font-size: 0.8rem; 
+
+}
+
+/* footer */
+
+.footer {
+	background-color: rgb(255, 208, 148)
+}
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 3rem;
+}
+
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 30rem;
+	gap: 3rem;
+	justify-items: center;
+}
+
+.title-footer {
+	font-weight: 600;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+	list-style: none;
+	color: #000000;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+	color: var(--dark-color);
+}
+
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.social-icons span {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icons span i {
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.facebook {
+	background-color: #3b5998;
+}
+
+.twitter {
+	background-color: #00acee;
+}
+
+.youtube {
+	background-color: #c4302b;
+}
+
+.pinterest {
+	background-color: #c8232c;
+}
+
+.instagram {
+	background: linear-gradient(
+		#405de6,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d,
+		#f56040,
+		#fcaf45
+	);
+}
+
+.content p {
+	font-size: 1.4rem;
+	color: #000000;
+	font-weight: 300;
+}
+
+.content input {
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #d2b495;
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: var(--dark-color);
+	display: block;
+	margin-bottom: 3rem;
+	margin-top: 2rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content input::-webkit-input-placeholder {
+	color: #eee;
+}
+
+.content button {
+	border: none;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	font-size: 1.4rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.content button:hover {
+	background-color: var(--background-color);
+	color: var(--primary-color);
+}
+
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2rem;
+
+	border-top: 1px solid #d2b495;
+}
+
+.copyright p {
+	font-weight: 400;
+	font-size: 1.6rem;
+}
+
+
+
+
+
+
+.contact-info,
+.map {
+    background-color: var(--clr-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2,
+.map h2 {
+    margin-bottom: 1.5rem;
+    color: var(--clr-main);
+}
+
+.map {
+    height: 400px; /* Ajusta la altura del mapa según sea necesario */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: center;
+    
+}
+
+.map p {
+    font-size: 1.2rem;
+    color: var(--clr-gray);
+}
+
+body {
+	background-color: lemonchiffon;
+}
+
+.botonbonito {
+   
+    background-color: #f44336; 
+    color: rgb(165, 41, 41); 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    border: none; 
+}
+

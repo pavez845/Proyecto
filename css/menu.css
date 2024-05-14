@@ -1,0 +1,16 @@
+body {
+    background-color: lemonchiffon;
+    background: lemonchiffon;
+}
+.card-img-top {
+    height: 300px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Para que las imágenes se ajusten correctamente */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Tamaño de fuente para el título */
+}
+
+.card-text h2, .card-text h1 {
+    font-size: 1.2rem; /* Tamaño de fuente para los subtítulos */
+}
