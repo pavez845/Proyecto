@@ -63,13 +63,19 @@
                 var nombre = $("#nombre").val();
                 var apellidop =$("#apellidop").val();
                 var apellidom =$("#apellidom").val();
-                var rut =$("#rut").val();
+                var celular =$("#celular").val();
+                var email = $("#email").val();
+                var motivacion = $("#motivacion").val();
+
+
                 
-                var email = $("email").val();
-      
+                var SoloNum = /^[0-9]+$/;
+
+                var MailForm = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       
       
                 console.log(nombre.length);
+                console.log(email);
       
       
       
@@ -94,14 +100,30 @@
       
                 if (apellidom == "" || apellidom.length > 20 || apellidom.length <3){
       
-                  alert("Apellido no valido");
+                  alert("Apellido materno no valido");
       
                   event.preventDefault();
       
                   return false; 
                 }
                 
-                if (email == "") {
+                
+                if (celular == "" || celular.length > 9 || celular.length < 9 ){
+                  alert("Número celular no valido");
+
+                  event.preventDefault();
+
+                  return false;
+                } 
+                else if(!SoloNum.test (celular)){
+                  alert("El Número celular solo debe contener números")
+                  event.preventDefault();
+                  return false;
+
+                }
+
+                
+                if (email =="" || !MailForm.test(email)) {
       
                   alert("Email no válido");
       
@@ -110,7 +132,15 @@
                   return false;
       
                 }
-      
+
+
+                if (motivacion.length < 20) { 
+                  alert("El campo de texto debe tener al menos 20 caracteres");
+                  event.preventDefault();
+                  return false;
+                }
+              
+    
       
       
                 alert("Fomulario enviado con éxito");
